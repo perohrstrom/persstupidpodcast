@@ -20,6 +20,7 @@ export default class Episode extends React.Component {
             <span className="card-content">{movie}</span>
             <div className="card-image">
               <img
+                name="Dan - this is where I would reference the PROPS of this episode and not pass a url"
                 src="https://www.edx.org/sites/default/files/upload/upvote-downvote.png"
                 alt={name}
                 width="50px"
