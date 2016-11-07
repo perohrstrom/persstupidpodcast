@@ -7,7 +7,7 @@ export default class Episode extends React.Component {
     }
 
   render() {
-    let { name, movie, soundCloudId, description } = this.props
+    let { name, movie, soundCloudId, description, poster, i } = this.props
     const cardStyle = {
       width: "400px",
       display: "inline-block",
@@ -15,21 +15,23 @@ export default class Episode extends React.Component {
     }
     return <div style={cardStyle}>
         <div className="col s12 my7">
-          <div className="card medium">
+          <div className="card medium hoverable">
             <span className="card-title">{name}</span>
             <span className="card-content">{movie}</span>
-            <div className="card-image">
-              <img
-                src="https://www.edx.org/sites/default/files/upload/upvote-downvote.png"
-                alt={name}
-                width="50px"
-                height="50%"
-              />
-            </div>
-            <div className="col s12 m5">
-              <div className="card-panel teal">
-                <span className="white-text">{description}
-                </span>
+            <div className="episode-content">
+              <div className="card-image">
+                <img
+                  src={poster}
+                  alt={name}
+                  width="50px"
+                  height="50%"
+                />
+              </div>
+              <div className="col s12 m5">
+                <div className="card-panel grey">
+                  <span className={styles.description}>{description}
+                  </span>
+                </div>
               </div>
             </div>
             <iframe
