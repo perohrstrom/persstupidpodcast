@@ -1,7 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 
 module.exports = {
   devtool: 'source-map',
@@ -16,8 +14,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin("style.css", {allChunks: false})
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [
@@ -29,20 +26,25 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
+        include: __dirname + '/images',
         loaders: [
             'file?hash=sha512&digest=hex&name=[hash].[ext]',
             'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
       {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader:"url?limit=10000&mimetype=application/font-woff"
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style-loader'
       },
       {
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file"
-      },
-      { test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        }
       }
     ]
   }
