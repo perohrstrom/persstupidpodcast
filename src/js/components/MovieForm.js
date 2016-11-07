@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './stylesheets.css';
+import styles from '../../css/stylesheets.css';
 
 export default class MovieForm extends React.Component {
   constructor() {
@@ -7,27 +7,35 @@ export default class MovieForm extends React.Component {
   }
 
   render(){
-    return <div id="movie_form" className="valign-wrapper">
-      <form className="col s12 center-align">
-        <div className="row">
+    return <div id="movie_form" className={styles.movieForm}>
+      <form className="modal-content">
+        <div>
           <div className="input-field col s6">
             <input id="first_name" type="text" className="validate" />
             <label htmlFor="name">First Name</label>
           </div>
         </div>
-        <div className="row">
+        <div>
           <div className="input-field col s6">
             <input id="email" type="email" className="validate" />
             <label htmlFor="email">Email</label>
           </div>
         </div>
-        <div className="row">
+        <div>
           <div className="input-field col s6">
-            <input id="movie" type="text" className="validate" />
+            <input id="movie" type="text" className={styles.comments} />
             <label htmlFor="movie">Suggest a Movie</label>
           </div>
         </div>
-        <button className="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+        <div className="row">
+        <div className="input-field col s12">
+          <textarea id="textarea1" className="materialize-textarea"></textarea>
+          <label htmlFor="textarea1">Textarea</label>
+        </div>
+      </div>
+        <div className="modal-footer">
+          <button className="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+        </div>
       </form>
     </div>
   }

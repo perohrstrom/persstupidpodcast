@@ -5,12 +5,12 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './index.js'
+    './src/js/components/index.js'
   ],
   output: {
-    path: __dirname,
+    path: __dirname + 'public',
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -22,15 +22,11 @@ module.exports = {
         test: /\.js?$/,
         loaders: [ 'babel' ],
         exclude: /node_modules/,
-        include: __dirname
+        include: __dirname + '/src/js'
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        include: __dirname + '/images',
-        loaders: [
-            'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
+        test: /\.(jpg|png)$/,
+        loader: "url-loader?limit=8192"
       },
       {
         test: /\.css$/,

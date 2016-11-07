@@ -17,7 +17,7 @@ var guests = [
     name: "Rachel Epp",
     movie: "Star Wars (Original Trilogy)",
     poster: "./images/rachelepp.jpg",
-    description: "Well, I felt like I experienced something really amazing this episode. Such an honor to introduce Rachel to the world of Star Wars.",
+    description: "Well, I felt like I experienced something really amazing this episode. Such an honor to introduce Rachel to the world of Star Wars. May the farce with you.",
     soundCloudId: "233061557"
   },
   {
@@ -43,4 +43,4 @@ var guests = [
   }
 ];
 
-module.exports = guests
+module.exports = guests.reverse()

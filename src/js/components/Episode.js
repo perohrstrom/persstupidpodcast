@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './stylesheets.css';
+import styles from '../../css/stylesheets.css';
 
 export default class Episode extends React.Component {
   constructor() {
@@ -8,12 +8,8 @@ export default class Episode extends React.Component {
 
   render() {
     let { name, movie, soundCloudId, description, poster, i } = this.props
-    const cardStyle = {
-      width: "400px",
-      display: "inline-block",
-      padding: "20px"
-    }
-    return <div style={cardStyle}>
+
+    return <div className={styles.cardstyle}>
         <div className="col s12 my7">
           <div className="card medium hoverable">
             <span className="card-title">{name}</span>
@@ -23,14 +19,11 @@ export default class Episode extends React.Component {
                 <img
                   src={poster}
                   alt={name}
-                  width="50px"
-                  height="50%"
                 />
               </div>
               <div className="col s12 m5">
                 <div className="card-panel grey">
-                  <span className={styles.description}>{description}
-                  </span>
+                  <span className={styles.description}>{description}</span>
                 </div>
               </div>
             </div>
