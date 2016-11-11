@@ -6,11 +6,6 @@ import NavBar from './NavBar';
 import guests from '../../data/guests';
 import Footer from './Footer';
 import styles from '../../css/stylesheets.css';
-// import rachel from './images/rachelepp.jpg';
-// import steve from './images/steveconzo.jpg';
-// import jordan from './images/jordanhudock.jpg';
-// import candice from './images/candiceruud.jpg';
-// import dan from './images/danmunkus.jpg';
 
 export default class App extends React.Component {
   constructor() {
@@ -33,7 +28,6 @@ export default class App extends React.Component {
           )
         }
       </div>
-      <MovieForm />
       <Footer />
     </div>
   }

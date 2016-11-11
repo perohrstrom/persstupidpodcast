@@ -1,5 +1,7 @@
 .episode_container {
-  width: 30%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 25px;
   display: block;
 }
@@ -43,7 +45,8 @@ nav ul a {
   vertical-align: text-top;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
+  padding: 3%;
+
 }
 
 div.cardstyle {
@@ -71,12 +74,26 @@ img {
 }
 
 .movieForm {
+  padding-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 40%;
 }
 
-.comments {
-  width: 100%;
-  height: 60px;
+.button {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  background-color: #4496B2 !important;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-appearance: button;
+  cursor: pointer;
 }

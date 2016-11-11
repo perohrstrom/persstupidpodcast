@@ -11,9 +11,8 @@ export default class NavBar extends React.Component {
       <div className="nav-wrapper">
         <a href="#" className="brand-logo">Per’s Stupid Podcast</a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="#movie_form">Suggest a Movie</a></li>
-          <li><a href="badges.html">Per’s Blog</a></li>
-          <li><a href="collapsible.html">Contact Per</a></li>
+          <li><a href="https://perlikethefruit.wordpress.com/" target="_blank">Per’s Blog</a></li>
+          <li><a href="mailto:perlikethefruit@gmail.com?Subject=Hi%20Per">Contact Per</a></li>
         </ul>
       </div>
     </nav>
