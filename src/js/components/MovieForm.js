@@ -6,9 +6,14 @@ export default class MovieForm extends React.Component {
     super();
   }
 
+  submitMovie(event){
+    event.preventDefault();
+    debugger
+  }
+
   render(){
     return <div id="movie_form" className={styles.movieForm}>
-      <form className="modal-content">
+      <form onSubmit={this.submitMovie} className="modal-content hoverable">
         <div>
           <div className="input-field col s6">
             <input id="first_name" type="text" className="validate" />
@@ -23,7 +28,8 @@ export default class MovieForm extends React.Component {
         </div>
         <div>
           <div className="input-field col s6">
-            <input id="movie" type="text" className={styles.comments} />
+            <input id="movie" type="text"
+          />
             <label htmlFor="movie">Suggest a Movie</label>
           </div>
         </div>
@@ -34,7 +40,7 @@ export default class MovieForm extends React.Component {
         </div>
       </div>
         <div className="modal-footer">
-          <button className="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+          <button className={styles.button} type="submit" name="action">Submit</button>
         </div>
       </form>
     </div>

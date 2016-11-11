@@ -6,6 +6,10 @@ export default class Episode extends React.Component {
         super();
     }
 
+    tweetTitle(movie) {
+      return movie.replace(/ /g, "")
+    }
+
   render() {
     let { name, movie, soundCloudId, description, poster, i } = this.props
 
@@ -33,6 +37,10 @@ export default class Episode extends React.Component {
               scrolling="no"
               frameBorder="no" src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + soundCloudId + "&amp;color=ff5500&amp;inverse=false&amp;auto_play=false&amp;show_user=true"}>
             </iframe>
+            <a className="twitter-hashtag-button"
+
+              href={"https://twitter.com/intent/tweet?button_hashtag="+this.tweetTitle(movie) +"&hashtags=stupidpodcast"}>
+            Tweet</a>
           </div>
         </div>
     </div>
