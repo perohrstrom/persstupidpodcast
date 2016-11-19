@@ -1,7 +1,6 @@
 import React from 'react';
 import Materialize from 'materialize-css';
 import Episode from './Episode';
-import MovieForm from './MovieForm';
 import NavBar from './NavBar';
 import guests from '../../data/guests';
 import Footer from './Footer';
