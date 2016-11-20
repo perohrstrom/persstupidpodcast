@@ -32,14 +32,14 @@ var guests = [
     movie: "The Sound of Music",
     poster: "./images/candiceruud.jpg",
     description: "I knew what I was getting myself into. It doesnt make it any easier to manage a podcast over the emphatic singing of Candice and Rachel. Enjoy.",
-    soundCloudId: "237040746"
+    soundCloudId: "242022610"
   },
   {
     name: "Dan Munkus",
     movie: "The Dark Knight",
     poster: "./images/danmunkus.jpg",
     description: "You either die the hero, or live long enough to be a guest on my podcast. Gothams finest welcomes Dan Munkus! You comic loving son-of-a-bitch!",
-    soundCloudId: "237040746"
+    soundCloudId: "255462528"
   }
 ];
 
