@@ -5,6 +5,7 @@
   padding: 20px;
   display: block;
 }
+
 .media_container {
   border: 1px solid black;
   width: 100%;
@@ -14,14 +15,11 @@
 }
 
 html {
-  background-color: white !important;
+  background-color: #3A656A;
 }
 
 nav {
-    color: #fff;
-    background-color: #4496B2;
-    width: 100%;
-    height: 56px;
+    background-color: #5A696A;
     line-height: 56px;
 }
 
@@ -36,9 +34,8 @@ nav ul a {
     transition: background-color .3s;
     font-size: 1rem;
     color: white;
-    display: inline-block;
-    padding: 0 15px;
-    cursor: pointer;
+    display: block;
+    padding: 0 10%;
 }
 
 .episodes {
@@ -57,8 +54,7 @@ div.cardstyle {
 }
 
 img {
-  height: 350px;
-  width: 350px;
+  height: 100%;
 }
 
 .footer {

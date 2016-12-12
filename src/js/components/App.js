@@ -12,9 +12,9 @@ export default class App extends React.Component {
   }
 
   render(){
-    return <div>
+    return <div className="row">
       <NavBar />
-      <div className={styles.episodes}>
+      <div className="col s12 m8 l9">
         { guests.map((guest, i) =>
           <Episode
             name={guest.name}
@@ -27,7 +27,7 @@ export default class App extends React.Component {
           )
         }
       </div>
-      <Footer />
+
     </div>
   }
 }
