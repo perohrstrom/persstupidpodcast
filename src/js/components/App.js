@@ -14,7 +14,7 @@ export default class App extends React.Component {
   render(){
     return <div className="row">
       <NavBar />
-      <div className="col s12 m8 l9">
+      <div className="col s12 m8 l9 push-s3">
         { guests.map((guest, i) =>
           <Episode
             name={guest.name}

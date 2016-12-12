@@ -20,7 +20,7 @@ export default class Episode extends React.Component {
             <img className="activator" src={poster}/>
           </div>
           <div className="card-content">
-            <span className="card-title activator grey-text text-darken-4">{name} w/ {movie}<i className="material-icons right">more_vert</i></span>
+            <span className="card-title activator grey-text text-darken-4">{name}/{movie}<i className="material-icons right">more_vert</i></span>
             <iframe
               width="100%"
               height="20"

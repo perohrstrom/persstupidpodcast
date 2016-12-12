@@ -8,14 +8,14 @@ var guests = [
   },
   {
     name: "Mary Jennings",
-    movie: "The House of the Devil",
+    movie: "House of the Devil",
     poster: "./images/maryjennings.jpg",
     description: "The amazing Mary Jennings joins me for fright night! The House of the Devil - is it an eighties movie? Is it a modern movie? Is it amazing? Yes. Yes. Yes.",
     soundCloudId: "227243854"
   },
   {
     name: "Rachel Epp",
-    movie: "The Original Star Wars Trilogy",
+    movie: "Star Wars",
     poster: "./images/rachelepp.jpg",
     description: "Well, I felt like I experienced something really amazing this episode. Such an honor to introduce Rachel to the world of Star Wars. May the farce with you.",
     soundCloudId: "233061557"
