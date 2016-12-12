@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  display: block;
+  display: innline-block;
 }
 
 .media_container {

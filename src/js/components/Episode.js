@@ -13,8 +13,8 @@ export default class Episode extends React.Component {
   render() {
     let { name, movie, soundCloudId, description, poster, i } = this.props
 
-    return <div>
-        <div className="col s12 m7">
+    return <div class="episode_container">
+        <div className="col s12 m6">
         <div className="card small">
           <div className="card-image waves-effect waves-block waves-light">
             <img className="activator" src={poster}/>
