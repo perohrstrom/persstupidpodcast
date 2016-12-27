@@ -4,7 +4,6 @@ import Episode from './Episode';
 import NavBar from './NavBar';
 import guests from '../../data/guests';
 import Footer from './Footer';
-import styles from '../../css/stylesheets.css';
 
 export default class App extends React.Component {
   constructor() {
@@ -12,7 +11,7 @@ export default class App extends React.Component {
   }
 
   render(){
-    return <div>
+    return <div className="container">
       <NavBar />
       <div className="row">
         { guests.map((guest, i) =>

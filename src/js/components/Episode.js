@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../../css/stylesheets.css';
 
 export default class Episode extends React.Component {
   constructor() {
@@ -13,7 +12,7 @@ export default class Episode extends React.Component {
   render() {
     let { name, movie, soundCloudId, description, poster, i } = this.props
 
-    return <div className="col s12 m6">
+    return <div className="col s12 m5">
         <div className="card medium">
           <div className="card-image waves-effect waves-block waves-light">
             <img className="activator" src={poster}/>

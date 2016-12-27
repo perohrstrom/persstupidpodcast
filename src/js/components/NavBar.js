@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../../css/stylesheets.css';
 
 export default class NavBar extends React.Component {
   constructor(){
@@ -7,34 +6,22 @@ export default class NavBar extends React.Component {
   }
 
   render(){
-    return <div>
-    <nav className="col s3 m4 l3 push-s9">
-      <div>
-        <a href="#">Per’s Stupid Podcast</a>
-      </div>
-      <div>
-        <ul id="nav-mobile">
-          <li>
-            <a href="https://perlikethefruit.wordpress.com/" target="_blank">Per’s Blog</a>
-          </li>
-          <li>
-            <a href="mailto:perlikethefruit@gmail.com?Subject=Hi%20Per">Contact Per</a>
-          </li>
-          <li className={styles.footer}>
-            <a className="grey-text text-lighten-3 icono-macbook" target="_blank" href="https://github.com/perohrstrom">@perohrstrom on GitHub</a><span className="icono-macbook"></span>
-          </li>
-          <li className={styles.footer}>
-            <a className="white-text textghten-3 icono-twitter" target="_blank" href="https://twitter.com/perlikethefruit">@perlikethefruit</a>
-          </li>
-          <li className={styles.footer}>
-            <a className="white-text textghten-3 iconolinkedIn" target="_blank" href="https://www.linkedin.com/in/perohrstrom">LinkedIn</a>
-          </li>
-          <li className={styles.footer}>
-            <a className="white-text text-lighten-3 icono-piano" target="_blank" href="http://bit.ly/2fehSqj">Music</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    </div>
+    return <header className="header">
+      <ul id="slide-out" className="side-nav green lighten-1">
+      <li>
+        <div className="userView">
+            <a href="#!user"><img src="images/per_about.jpg"/></a>
+        <div className="divider"></div>
+          <div className="section">
+            <p>About Per</p>
+            <p>{"I'm a computer programmer, podcast enthusiast, and I moonlight as a passable musician. I love burritos, plaid, dogs, and conversation."}</p>
+            <p></p>
+          </div>
+          <a href="mailto:per.k.ohrstrom@gmail.com"><span className="black-text">Contact Per</span></a>
+        </div>
+      </li>
+    </ul>
+    <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons play_arrow">play_arrow</i></a>
+  </header>
   }
 }

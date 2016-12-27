@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "image-webpack-loader": "^3.0.0",
+    "materialize-css": "^0.97.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
