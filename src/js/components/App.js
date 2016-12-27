@@ -11,22 +11,21 @@ export default class App extends React.Component {
   }
 
   render(){
-    return <div className="container">
-      <NavBar />
-      <div className="row">
-        { guests.map((guest, i) =>
-          <Episode
-            name={guest.name}
-            movie={guest.movie}
-            soundCloudId={guest.soundCloudId}
-            description={guest.description}
-            poster={guest.poster}
-            key={i}
-          />
-          )
-        }
+    return <div className="grey lighten-2">
+      <div className="container">
+        <NavBar />
+          { guests.map((guest, i) =>
+            <Episode
+              name={guest.name}
+              movie={guest.movie}
+              soundCloudId={guest.soundCloudId}
+              description={guest.description}
+              poster={guest.poster}
+              key={i}
+            />
+            )
+          }
       </div>
-
     </div>
   }
 }
