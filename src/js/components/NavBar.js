@@ -7,7 +7,7 @@ export default class NavBar extends React.Component {
   }
 
   render(){
-    return <div className="">
+    return <div>
     <nav className="col s3 m4 l3 push-s9">
       <div>
         <a href="#">Per’s Stupid Podcast</a>

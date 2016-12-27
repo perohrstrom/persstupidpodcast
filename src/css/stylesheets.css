@@ -24,8 +24,7 @@ nav {
 }
 
 .episodes {
-  padding-left: 25%;
-}
+  display: inline-block;}
 
 footer {
   color: #fff;
