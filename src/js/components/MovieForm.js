@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../../css/stylesheets.css';
 
 export default class MovieForm extends React.Component {
   constructor() {

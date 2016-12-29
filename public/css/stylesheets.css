@@ -1,0 +1,12 @@
+.card {
+  display: inline-block !important;
+}
+
+iframe {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.card-image {
+  width: 100% !important;
+}

@@ -1,9 +1,4 @@
-import $ from 'jquery';
-import Materialize from 'materialize-css';
-
-
 $(document).ready(function(){
-  console.log("hello");
   $(".dropdown-button").dropdown({ hover: false });
   $('.episode-content').css("display: hidden");
   $('.movie_form').modal({
@@ -20,4 +15,13 @@ $(document).ready(function(){
         complete: function() { alert('Closed'); } // Callback for Modal close
       }
     );
+
+    $('.button-collapse').sideNav({
+       menuWidth: 300, // Default is 240
+       edge: 'left', // Choose the horizontal origin
+       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+       draggable: true // Choose whether you can drag to open on touch screens
+     }
+   );
+   console.log("i'm loading the correct INDEX.js file")
 })

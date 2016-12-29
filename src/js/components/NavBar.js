@@ -1,20 +1,29 @@
 import React from 'react';
-import styles from '../../css/stylesheets.css';
-
 export default class NavBar extends React.Component {
   constructor(){
     super();
   }
 
   render(){
-    return <nav>
+    return <header className="header">
+    <nav>
       <div className="nav-wrapper">
-        <a href="#" className="brand-logo">Per’s Stupid Podcast</a>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="https://perlikethefruit.wordpress.com/" target="_blank">Per’s Blog</a></li>
-          <li><a href="mailto:perlikethefruit@gmail.com?Subject=Hi%20Per">Contact Per</a></li>
+        <a href="#!" className="brand-logo">Logo</a>
+        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+        <ul className="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+        <ul className="side-nav" id="mobile-demo">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
         </ul>
       </div>
     </nav>
+  </header>
   }
 }
