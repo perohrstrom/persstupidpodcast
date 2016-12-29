@@ -13,26 +13,25 @@ export default class Episode extends React.Component {
     let { name, movie, soundCloudId, description, poster, i } = this.props
 
     return <div className="card medium">
-      <div className="card-image waves-effect waves-block waves-light">
-        <img className="activator" src={poster}/>
+        <div className="card-image waves-effect waves-block waves-light">
+          <img className="activator" src={poster}/>
+        </div>
+        <div className="card-content">
+          <span className="card-title activator grey-text text-darken-4">{name}/{movie}</span>
+        </div>
+          <iframe
+            width="98%"
+            height="20"
+            scrolling="no"
+            frameBorder="no" src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + soundCloudId + "&amp;color=ff5500&amp;inverse=false&amp;auto_play=false&amp;show_user=true"}>
+          </iframe>
+        <div className="card-reveal">
+          <span className="card-title grey-text text-darken-4">{name}/{movie}<i className="material-icons right">close</i></span>
+          <p>{description}</p>
+        </div>
+        <a className="twitter-hashtag-button"
+          href={"https://twitter.com/intent/tweet?button_hashtag="+this.tweetTitle(movie) +"&hashtags=stupidpodcast"}>
+        Tweet</a>
       </div>
-      <div className="card-content">
-        <span className="card-title activator grey-text text-darken-4">{name}/{movie}<i className="material-icons right">more_vert</i></span>
-        <p>Insert Twitter Link</p>
-      </div>
-        <iframe
-          width="100%"
-          height="20"
-          scrolling="no"
-          frameBorder="no" src={"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + soundCloudId + "&amp;color=ff5500&amp;inverse=false&amp;auto_play=false&amp;show_user=true"}>
-        </iframe>
-      <div className="card-reveal">
-        <span className="card-title grey-text text-darken-4">{name}/{movie}<i className="material-icons right">close</i></span>
-        <p>{description}</p>
-      </div>
-      <a className="twitter-hashtag-button"
-        href={"https://twitter.com/intent/tweet?button_hashtag="+this.tweetTitle(movie) +"&hashtags=stupidpodcast"}>
-      Tweet</a>
-    </div>
   }
 }
