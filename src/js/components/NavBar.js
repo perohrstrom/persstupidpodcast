@@ -5,25 +5,30 @@ export default class NavBar extends React.Component {
   }
 
   render(){
-    return <header className="header">
-    <nav>
-      <div className="nav-wrapper">
-        <a href="#!" className="brand-logo">Logo</a>
-        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
-        <ul className="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-        </ul>
-        <ul className="side-nav" id="mobile-demo">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-        </ul>
+    const { episodes } = this.props
+    return <div className="header">
+      <nav>
+        <div className="nav-wrapper blue lighten-1">
+          <a href="#" className="brand">{"Per's Stupid Podcast"}</a>
+          <a href="#" data-activates="mobile-demo" className="button-collapse show-on-large"><i className="material-icons">menu</i></a>
+            <ul className="side-nav" id="mobile-demo">
+              <li>
+                <div className="userView">
+                    <a href="#!user"><img src="images/per_about.jpg"/></a>
+                    <div className="divider"></div>
+                    <ul className="section">
+                    { episodes.map((episode, i) => {
+                        return (<li key={i}><a href={"#"+ episode.movie.split(' ').join('')}>{episode.movie}</a></li>)
+                      })
+                    }
+                    <li><a href="mailto:per.k.ohrstrom@gmail.com">Contact</a></li>
+                    </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </header>
+
   }
 }
