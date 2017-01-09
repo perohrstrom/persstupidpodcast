@@ -11,16 +11,13 @@ export default class App extends React.Component {
   }
 
   render(){
-    return <div className="grey lighten-2">
+    console.log(guests)
+    return <div className="grey darken-3">
       <div className="container">
-        <NavBar />
+        <NavBar episodes={guests} />
           { guests.map((guest, i) =>
             <Episode
-              name={guest.name}
-              movie={guest.movie}
-              soundCloudId={guest.soundCloudId}
-              description={guest.description}
-              poster={guest.poster}
+              guest={guest}
               key={i}
             />
             )
