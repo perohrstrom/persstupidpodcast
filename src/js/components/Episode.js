@@ -11,7 +11,6 @@ export default class Episode extends React.Component {
 
   render() {
     let { name, movie, soundCloudId, description, description2, description3, poster } = this.props.guest
-    console.log(description2, description3)
     return <div id={movie.split(' ').join('')} className="scrollspy section">
         <div className={"card large "}>
           <div className="card-image waves-effect waves-block waves-light">
